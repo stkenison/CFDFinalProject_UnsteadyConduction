@@ -56,7 +56,8 @@ for k in range(0,len(gridsize)):
     plt.figure(1+(k*3))
     plt.plot(TempOverTime[0,:],TempOverTime[1,:])
     plt.title("Temperature over Time at (x = {xval})".format(xval = XY_values[int(0.4*gridsize[k])]))
-    plt.xlabel("Time (s)");plt.ylabel("Temperature ($^\circ$C)"); plt.xscale('log'); 
+    plt.xlabel("Time (s)");plt.ylabel("Temperature ($^\circ$C)"); plt.xscale('log');  
+    #plt.xlim = ((time_interval[0],time_interval[1])); plt.ylim = ((temp_interval[0],temp_interval[1]))
     plt.savefig('Figure{}'.format(1+k*3)); plt.pause(0.00001)
 
     #generate temperature plot at 0.8*range
